@@ -6,33 +6,6 @@ clc;
 %I wille monitor readings and determine their total step count and no
 %feedback will be provided
 
-% %figure
-% b = 0;
-% n = 0;
-% % Plot for left leg data
-% % subplot(2,1,1)
-% plot(b,n)
-% hold on
-% ylim([-300 300])
-% set(gca,'xlim',[0 5]) %% GCA is a function that returns the handle of the current axis in the current figure
-% title("Left leg Gyro data")
-% a_l = gca;
-% 
-% x_a = animatedline;
-% x_a.Color = 'r';
-% legend('x gyro')
-
-% % Gyroscope plotting
-% subplot(2,1,2)
-% plot(b,n)
-% hold on
-% title("Gyro data for right leg")
-% ylim([-300 300])
-% set(gca,'xlim',[0 5])
-% a_r = gca;
-% x_a_r = animatedline;
-% x_a_r.Color = 'b';
-% legend('x gyro')
 
 
 
@@ -128,15 +101,6 @@ if (time_elapsed == 280)
     fprintf("The number of right results is: %d/t Left: %d\n", length(x_accel_right), length(x_accel_left))
 end
 
-% if (L_or_R(number + 1) == 0)
-%     addpoints(x_a, time_left(left-1), x_gyro_left(left-1))
-% 
-% end
-% if (L_or_R(number + 1) == 1)
-%     addpoints(x_a_r, time_right(right-1), x_gyro_right(right-1))
-% end
-% addpoints(x_a, time(number+1), x_gyro(number+1))
-% drawnow
 number = number +1;
     if (time(number) > 5)
         a_l.XLim = datenum([time(number) - 5 time(number)+5]);
@@ -148,9 +112,7 @@ end
 fprintf(x, "%d\n",  zeroVibration);
 close all
 
-%Left Foot steps
-%[steps_left] = GyroAnalysis(x_gyro_left,time_left);
-%Right foot
+
 [cadence_left, steps_left] = findCadence(x_gyro_left,time_left);
 [cadence_right, steps_right] = findCadence(x_gyro_right,time_right);
 

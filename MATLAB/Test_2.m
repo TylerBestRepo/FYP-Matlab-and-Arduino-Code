@@ -26,38 +26,6 @@ clc;
 normal_cadence = 105;
 
 
-%figure
-b = 0;
-n = 0;
-%Plot for left leg data
-% subplot(2,2,1)
-% plot(b,n)
-% hold on
-% ylim([-300 300])
-% set(gca,'xlim',[0 5]) %% GCA is a function that returns the handle of the current axis in the current figure
-% title("Left leg Gyro data")
-% a_l = gca;
-% 
-% x_a = animatedline;
-% x_a.Color = 'r';
-% y_a = animatedline;
-% y_a.Color = 'b';
-% z_a = animatedline;
-% z_a.Color = 'm';
-
-%legend('x acceleration', 'y acceleration', 'z acceleration')
-%Gyroscope plotting
-% subplot(2,2,2)
-% plot(b,n)
-% hold on
-% title("Gyro data for right leg")
-% ylim([-300 300])
-% set(gca,'xlim',[0 5])
-% a_r = gca;
-% x_a_r = animatedline;
-% x_a_r.Color = 'r';
-% legend('x accel', 'y accel', 'z accel')
-
 
 %While loop counter 
 number = 0;
