@@ -9,6 +9,10 @@ plotting after the test ends.
 
 In the matlab scripts the USB com port will likely need to be changed to read data from the corrrect port the Arduino is plugged into.
 
+'Test 1' is for storing data with no vibrational feedback
+
+'Test 2' is for storing data and outputting vibrational feedback for ramplign or constant max amplitude feedback.
+
 # Arduino code
 
 There are a few libraries in the github repository that should be added so that it functions properly. There are 5 scripts that will be ran. They dont have the best most
